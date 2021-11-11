@@ -1,0 +1,107 @@
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+small {
+  font-family: $font-secondary;
+  font-style: normal;
+  font-weight: 500;
+}
+
+h1, .h1 {
+  font-family: $font-primary;
+  font-size: 58px;
+  font-weight: 500;
+  line-height: 0.91;
+  letter-spacing: 0.03em;
+  @media (min-width: $lg) {
+    font-size: 94px;
+  }
+}
+
+h2, .h2 {
+  font-size: 23px;
+  @media (min-width: $lg) {
+    font-size: 48px;
+  }
+}
+
+h3, .h3  {
+  font-size: 19px;
+  line-height: 1.2;
+  letter-spacing: normal;
+  @media (min-width: $lg) {
+    font-size: 33px;
+  }
+}
+
+h4, .h4 {
+  font-size: 17px;
+  line-height: 1.39;
+  @media (min-width: $lg) {
+    font-size: 26px;
+  }
+}
+
+h5,
+.h5 {
+  font-size: 11px;
+  line-height: 2.7;
+  @media (min-width: $lg) {
+    font-size: 17px;
+    line-height: 1.76;
+  }
+}
+
+h6,
+.h6 {
+  //@include h6;
+}
+
+p {
+  //font-weight: 300;
+}
+
+small {
+  font-family: $font-secondary;
+  font-size: 11px;
+  line-height: 1.36;
+  @media (min-width: $lg) {
+    font-size: 14px;
+    line-height: 1.64;
+  }
+}
+
+.alignleft {
+
+  /*rtl:ignore*/
+  float: left;
+
+  /*rtl:ignore*/
+  margin-right: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.alignright {
+
+  /*rtl:ignore*/
+  float: right;
+
+  /*rtl:ignore*/
+  margin-left: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.aligncenter {
+  clear: both;
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  margin-bottom: 1.5em;
+}
+
+.text-center {
+  text-align: center;
+}

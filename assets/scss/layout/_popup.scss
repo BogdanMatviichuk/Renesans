@@ -1,0 +1,98 @@
+/* Styles for dialog window */
+.img-popup {
+  position: relative;
+  max-width: 1320px;
+  margin: 20px auto;
+  box-shadow: 2px 2px 44px $pink;
+  .img {
+    width: 100%;
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.mfp-container {
+  padding: 0 20px!important;
+}
+
+
+.mfp-gallery {
+  .mfp-container {
+    padding: 0 25px!important;
+    @media (min-width: $lg) {
+      padding: 0 90px!important;
+    }
+  }
+  .mfp-bottom-bar {
+    display: none;
+  }
+  .mfp-arrow {
+    padding: 0;
+    width: 25px;
+    height: 25px;
+    margin-top: -12px;
+    opacity: 1;
+    background: url("../images/chevron-left.svg") no-repeat center;
+    background-size: 15px auto;
+    transform-origin: 50% 50%;
+    transform: none;
+    @media (min-width: $lg) {
+      width: 90px;
+      height: 90px;
+      margin-top: -45px;
+      background-size: 24px auto;
+    }
+    &:before,
+    &:after {
+      display: none;
+    }
+    &.mfp-arrow-right {
+      transform: scale(-1,-1);
+    }
+  }
+  .mfp-img {
+    height: 92vmin;
+  }
+}
+
+
+
+/**
+ * Fade-zoom animation for first dialog
+ */
+
+/* start state */
+.my-mfp-zoom-in .zoom-anim-dialog {
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  transform: scale(0.8);
+}
+
+/* animate in */
+.my-mfp-zoom-in.mfp-ready .zoom-anim-dialog {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* animate out */
+.my-mfp-zoom-in.mfp-removing .zoom-anim-dialog {
+  transform: scale(0.8);
+  opacity: 0;
+}
+
+/* Dark overlay, start state */
+.my-mfp-zoom-in.mfp-bg {
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+/* animate in */
+.my-mfp-zoom-in.mfp-ready.mfp-bg {
+  opacity: 0.8;
+}
+/* animate out */
+.my-mfp-zoom-in.mfp-removing.mfp-bg {
+  opacity: 0;
+}

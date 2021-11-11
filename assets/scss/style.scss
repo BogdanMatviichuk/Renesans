@@ -1,0 +1,55 @@
+// --------------------------------------------------
+// vars
+
+@import 'partials/variables';
+
+// --------------------------------------------------
+// bootstrap
+
+@import '../node_modules/bootstrap-scss/bootstrap-reboot';
+@import '../node_modules/bootstrap-scss/bootstrap-grid';
+
+// --------------------------------------------------
+// mixins
+
+@import 'mixins/fonts';
+@import 'mixins/helpers';
+
+// --------------------------------------------------
+// partials
+
+@import 'partials/base';
+@import 'partials/icons';
+@import 'partials/buttons';
+@import 'partials/type';
+@import 'partials/form';
+
+// --------------------------------------------------
+// layout
+
+@import 'layout/footer';
+@import 'layout/header';
+@import 'layout/main';
+@import 'layout/nav';
+@import 'layout/sidebar';
+@import 'layout/popup';
+
+// --------------------------------------------------
+// components
+
+// @import your components here
+@import 'components/simplebar';
+@import 'components/custom-cursor';
+
+// --------------------------------------------------
+// views
+
+// @import your views/pages here
+@import 'views/home-page';
+@import 'views/about-page';
+@import 'views/press-page';
+@import 'views/restoration-page';
+@import 'views/product-page';
+@import 'views/contact-page';
+@import 'views/listing-page';
+

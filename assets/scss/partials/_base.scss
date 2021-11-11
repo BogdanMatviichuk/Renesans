@@ -1,0 +1,298 @@
+html {
+  margin: 0!important;
+}
+
+/* Remove outline on the forms and links */
+*:active, *:hover, *:focus {
+  outline: 0;
+  outline-offset: 0;
+}
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100%;
+  min-width: 320px;
+  font-family: $font-primary;
+  font-size: 14px;
+  line-height: 1.2;
+  color: $white;
+  background-color: rgba(#140210, 1);
+  overflow-x: hidden;
+  @media (min-width: 768px) {
+    font-size: 22px;
+  }
+}
+
+.has-scroll-smooth [data-scroll-container] {
+  min-height: 100vh;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+html.overflow-hidden body {
+  height: 100vh;
+  overflow: hidden;
+}
+
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+}
+
+.main {
+  flex: 1 1 auto;
+  min-height: 50vh;
+}
+
+// Containers
+.cn-fluid {
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.cn {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  z-index: 0;
+
+  &--md {
+    @media (min-width: $xl) {
+      width: 1170px;
+      max-width: 100%;
+    }
+  }
+
+  &--lg {
+    @media (min-width: $xl) {
+      width: 1170px;
+      max-width: 100%;
+    }
+    @media (min-width: $xxl) {
+      width: 1320px;
+      max-width: 100%;
+    }
+  }
+}
+
+
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  @media (min-width: 992px) {
+    flex-direction: row;
+  }
+}
+
+// Gaps
+.gap {
+  &--lg {
+    padding: 40px 0;
+    @media (min-width: 768px) {
+      padding: 80px 0;
+    }
+  }
+  &--lg-top {
+    padding-top: 40px;
+    @media (min-width: 768px) {
+      padding-top: 80px;
+    }
+  }
+  &--lg-bottom {
+    padding-bottom: 40px;
+    @media (min-width: 768px) {
+      padding-bottom: 80px;
+    }
+  }
+
+  &--md {
+    padding: 25px 0;
+    @media (min-width: 768px) {
+      padding: 40px 0;
+    }
+  }
+  &--md-top {
+    padding-top: 25px;
+    @media (min-width: 768px) {
+      padding-top: 40px;
+    }
+  }
+  &--md-bottom {
+    padding-bottom: 25px;
+    @media (min-width: 768px) {
+      padding-bottom: 40px;
+    }
+  }
+}
+
+
+// Backgrounds
+.bg-center {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.bg-top {
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+}
+
+.bg-main {
+
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+
+.lazyload,
+.lazyloading {
+  opacity: 0;
+}
+.lazyload {
+  &:before {
+
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    margin-top: -16px;
+    margin-left: -16px;
+    width: 32px;
+    height: 32px;
+    border-radius: 32px;
+    animation: scaleout 1.2s infinite ease-in-out;
+
+    // Tweak as needed
+    mix-blend-mode: soft-light;
+    background-color: rgba(0, 0, 0, .9);
+  }
+}
+
+.loading,
+.lazyload,
+.lazyloaded {
+  opacity: 1;
+  &:not(.full-image):not(.b-hero) {
+    transition: 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+}
+
+
+// Block alignment
+.align-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.justify-bottom {
+  justify-content: flex-end;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+// Visibility
+.hidden-mobile {
+  display: none;
+  @media (min-width: 768px) {
+    display: block;
+  }
+}
+
+.hidden-desktop {
+  display: block;
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.img {
+
+  //max(sometimes fix)-width & fix-height this cover for IE
+  &--cover {
+    position: absolute;
+    top: -9999px;
+    right: -9999px;
+    bottom: -9999px;
+    left: -9999px;
+    margin: auto;
+    max-width: none;
+    min-width: 100%;
+    min-height: 100%;
+
+    &-wrap {
+      position: relative;
+      overflow: hidden;
+    }
+  }
+
+  //max-width & max-height this contain for IE
+  &--contain {
+    margin: auto;
+    max-height: 100%;
+    max-width: 100%;
+
+    &-wrap {
+      display: flex;
+    }
+  }
+
+  &--single {
+    width: 100%;
+  }
+}
+
+.c-scrollbar {
+  z-index: 99;
+}
+
+
+@keyframes scaleout {
+  0% {
+    transform: scale(0); }
+
+  100% {
+    transform: scale(1);
+    opacity: 0; }
+}
+
+@keyframes heroScale {
+  0% {
+    transform: scale(1); }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+

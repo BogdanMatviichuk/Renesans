@@ -1,0 +1,54 @@
+.btn {
+  display: inline-block;
+  vertical-align: baseline;
+
+  width: auto;
+  padding: 13px 28px;
+  border-width: 0;
+  border-radius: $border-radius-button;
+
+  font-family: $font-secondary;
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 0.2em;
+
+  cursor: pointer;
+  //transform: scale(1);
+  text-transform: uppercase;
+  transition: all 200ms ease-in;
+
+  @media (min-width: $md) {
+    padding: 17px 50px;
+    font-size: 13px;
+  }
+
+  &-white {
+    background-color: $white;
+    color: $aubergine;
+    &:hover {
+      color: $aubergine;
+      //transform: scale(1.05);
+    }
+  }
+
+  &-bordered {
+    border: 1px solid $white;
+    background-color: transparent;
+    color: $white;
+    &:hover {
+      color: $white;
+      //transform: scale(1.05);
+    }
+  }
+
+  &-dark {
+    background-color: $aubergine;
+    color: white;
+    &:hover {
+      //transform: scale(1.05);
+      color: white;
+    }
+  }
+}
