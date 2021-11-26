@@ -33,7 +33,7 @@ jQuery(function($) {
         const textSpitting = $('.text__spliting');
         Splitting({
             target: textSpitting,
-            by: "chars",
+            // by: "chars",
             key: null
         });
 
