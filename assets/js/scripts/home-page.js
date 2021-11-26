@@ -24,6 +24,11 @@ jQuery(function($) {
     }
 
     const wordSplitter = () => {
+
+    }
+
+    if (document.body.classList.contains('home')) {
+        carousels();
         const wordSpitting = Splitting();
         const textSpitting = $('.text__spliting');
         Splitting({
@@ -31,10 +36,7 @@ jQuery(function($) {
             by: "chars",
             key: null
         });
-    }
 
-    if (document.body.classList.contains('home')) {
-        carousels();
-        wordSplitter();
+        // wordSplitter();
     }
 });
