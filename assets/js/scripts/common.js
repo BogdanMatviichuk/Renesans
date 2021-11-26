@@ -155,6 +155,7 @@ jQuery(function($) {
 
   // Functions with scroller for single pages
   if (document.body.classList.contains('home')) {
+    console.log('home');
     homeHeroImgToggle();
 
     scroll.on('call', (obj) => {
@@ -170,7 +171,7 @@ jQuery(function($) {
 
   document.addEventListener("DOMContentLoaded", function(event) {
     scroller.update();
-    blockWelcome();
+    // blockWelcome();
   });
 });
 
