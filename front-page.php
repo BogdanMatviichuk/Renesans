@@ -104,7 +104,7 @@
   </div>
 </section>
 
-<section class="welcome welcome-text-animation" data-scroll-section>
+<section class="welcome welcome-text-animation" data-scroll-section data-scroll-call="testEvent2">
   <div class="cn cn--lg">
     <h5 class="welcome__title text__spliting" data-splitting><?php the_field( 'home_welcome_title' ); ?></h5>
     <h3 class="welcome__desc"><?php the_field( 'home_welcome_description' ); ?></h3>

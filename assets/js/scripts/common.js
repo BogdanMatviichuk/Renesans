@@ -20,6 +20,8 @@ jQuery(function($) {
     } else {
       header.removeClass('fixed');
     }
+
+
   });
 
   $('body').imagesLoaded(function() {
@@ -154,6 +156,10 @@ jQuery(function($) {
   // Functions with scroller for single pages
   if (document.body.classList.contains('home')) {
     homeHeroImgToggle();
+
+    scroll.on('call', (obj) => {
+      console.log(obj);
+    });
   }
 
   if (document.body.classList.contains('single')) {
