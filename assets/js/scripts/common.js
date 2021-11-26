@@ -1,5 +1,6 @@
 jQuery(function($) {
     'use strict';
+  console.log('Ready');
 
   const scrollOptions = {
     el: document.querySelector('[data-scroll-container]'),
